@@ -1,0 +1,1 @@
+"*.pyc\n*.pyo\n*.pyd\n__pycache__/\nenv/\nvenv/\n*.env\ndb.sqlite3\n*.log\nmedia/\nstatic/\n.vscode/\n.idea/\n.DS_Store\nThumbs.db" 
