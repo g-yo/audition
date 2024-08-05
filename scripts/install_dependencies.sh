@@ -17,15 +17,21 @@ cd Python-3.12.0
 sudo ./configure --enable-optimizations
 sudo make altinstall
 
-# Create symlinks for convenience
-sudo ln -s /usr/local/bin/python3.12 /usr/bin/python3.12
-sudo ln -s /usr/local/bin/pip3.12 /usr/bin/pip3.12
+# Create symlinks for convenience, if they don't already exist
+if [ ! -L /usr/bin/python3.12 ]; then
+    sudo ln -s /usr/local/bin/python3.12 /usr/bin/python3.12
+fi
+
+if [ ! -L /usr/bin/pip3.12 ]; then
+    sudo ln -s /usr/local/bin/pip3.12 /usr/bin/pip3.12
+fi
 
 # Navigate to the project directory
-if [ -d "/auditions" ]; then
-    cd /auditions
+PROJECT_DIR="/var/www/html/auditions"
+if [ -d "$PROJECT_DIR" ]; then
+    cd "$PROJECT_DIR"
 else
-    echo "Directory /auditions does not exist."
+    echo "Directory $PROJECT_DIR does not exist."
     exit 1
 fi
 
