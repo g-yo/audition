@@ -10,8 +10,5 @@ else
     exit 1
 fi
 
-# Activate virtual environment if you have one
-# source venv/bin/activate
-
 # Run Django migrations
 python3.12 manage.py migrate
