@@ -27,7 +27,7 @@ if [ ! -L /usr/bin/pip3.12 ]; then
 fi
 
 # Navigate to the project directory
-PROJECT_DIR="/var/www/html/auditions"
+PROJECT_DIR="/auditions"
 if [ -d "$PROJECT_DIR" ]; then
     cd "$PROJECT_DIR"
 else
