@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Add the directory containing gunicorn to PATH
+export PATH=$PATH:/usr/local/bin
+
 # Navigate to the project directory
 PROJECT_DIR="/home/ec2-user/auditions"
 if [ -d "$PROJECT_DIR" ]; then
