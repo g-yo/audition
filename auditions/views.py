@@ -103,7 +103,7 @@ def user_logout(request):
 
 @login_required
 def user_profile(request):
-    return render(request, 'auditions/user_profile.html')
+    return render(request, 'auditions/user_profile.html', {'user': request.user})
 
 def delete_movie(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)

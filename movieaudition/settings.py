@@ -17,6 +17,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 ]
 
+AUTH_USER_MODEL = 'auditions.CustomUser'
+
+
 FIREBASE_CREDENTIALS = {
     'type': 'service_account',
     'project_id': '<your-project-id>',
