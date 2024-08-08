@@ -19,9 +19,9 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-AWS_ACCESS_KEY_ID = 'AKIAU6GDYCKFR7MLHJ5N'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'movieaudtion'
+AWS_ACCESS_KEY_ID = os.getenv('AKIAU6GDYCKFR7MLHJ5N')
+AWS_SECRET_ACCESS_KEY = os.getenv('FxQEAskbXHcOH8YY6CvnEhQBAhIlNa26QBxqVRZ6')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME', 'movieaudtion')
 AWS_S3_REGION_NAME = 'us-east-1'  # e.g., 'us-east-1'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_CUSTOM_DOMAIN = 'movieaudtion.s3.amazonaws.com'
@@ -68,7 +68,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'movieaudtions',
         'USER': 'postgres',
-        'PASSWORD': 'eZiO8301',
+        'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': 'movieaudtions.chkka4ea4ew0.us-east-1.rds.amazonaws.com',  # e.g., 'your-db-instance.123456789012.us-east-1.rds.amazonaws.com'
         'PORT': '5432',  # PostgreSQL default port
     }
