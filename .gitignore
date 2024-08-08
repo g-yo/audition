@@ -14,3 +14,5 @@ __pycache__/
 
 .env
 
+# Ignore Django settings.py (sensitive information)
+settings.py
